@@ -23,7 +23,7 @@ LOCAL_FILE_DIR = BASE_DIR.parent
 SECRET_KEY = 'django-insecure-cdleyo*%+z(5c-u$q0%@#+r)68+hu7058sm-7k4himesm7d_t%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['kyla.pythonanywhere.com']
 
