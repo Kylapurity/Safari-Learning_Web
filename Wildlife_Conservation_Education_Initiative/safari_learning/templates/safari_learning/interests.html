@@ -96,7 +96,7 @@
       const interestValue = spanElement.textContent
       const deleteInterest = async () => {
         try {
-          const DELETEURL = 'http://127.0.0.1:8000/safari_learning/deleteinterest/{{logged_in_user.id}}/'
+          const DELETEURL = '/safari_learning/deleteinterest/{{logged_in_user.id}}/'
           const response = await fetch(DELETEURL, {
             method: 'DELETE',
             headers: {
@@ -144,7 +144,7 @@
       const interestValue = domElement.textContent.trim()
       const postInterest = async () => {
         try {
-          const POSTURL = 'http://127.0.0.1:8000/safari_learning/clickedinterest/{{logged_in_user.id}}/'
+          const POSTURL = '/safari_learning/clickedinterest/{{logged_in_user.id}}/'
           const response = await fetch(POSTURL, {
             method: 'POST',
             headers: {
