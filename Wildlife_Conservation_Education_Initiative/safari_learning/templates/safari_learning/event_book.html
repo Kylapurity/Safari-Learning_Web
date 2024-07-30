@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="{% static 'styles/event.css' %}">
+</head>
+<body>
+    <main>
+        {% if error_msg %}
+            <p class="message error">{{error_msg}}</p>
+        {% endif %}
+        {% if success_msg %}
+            <p class="message success">{{success_msg}}</p>
+        {% endif %}
+        <form action="" method="post" class="cointer">
+            {% csrf_token %}
+            <p>
+                {{safari_form.username.label_tag}}
+                {{safari_form.username}}
+            </p>
+            <p>
+                {{safari_form.email.label_tag}}
+                {{safari_form.email}}
+            </p>
+            <p>
+                {{event_form.event_name.label_tag}}
+                {{event_form.event_name}}
+            </p>
+            <p>
+                <button
+                    type="submit"
+                >
+                    Book Event
+                </button>
+            </p>
+        </form>
+        <div>
+            <a href="{% url 'safari:landing_page' %}">Go back</a>
+        </div>
+    </main>
+</body>
+</html>

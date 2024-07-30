@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Wildlife Conservation Awareness</title>
+    <link rel="stylesheet" href="{% static 'styles/FAQ.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <h1>FAQ's - Wildlife Conservation Awareness</h1>
+        <a href="{% url 'safari:landing_page' %}">Home</a>
+    </div>
+    <div class="container">
+        <div class="user-info">
+            Welcome, {{ logged_in_user.first_name }} {{ logged_in_user.last_name }}!
+        </div>
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(event)">
+                What is the purpose of this project?
+            </div>
+            <div class="faq-answer">
+                The project aims to support, educate, and create awareness among Africans about the effects of poaching
+                and how education and technology can reduce poaching. It also provides educational skills to help
+                individuals make an income and empower others.
+            </div>
+
+            <div class="faq-question" onclick="toggleAnswer(event)">
+                How does the platform educate communities on wildlife conservation?
+            </div>
+            <div class="faq-answer">
+                The platform offers interactive tools, informative content, and training programs that highlight the
+                importance of wildlife conservation and the impact of poaching on the environment.
+            </div>
+
+            <div class="faq-question" onclick="toggleAnswer(event)">
+                What types of training does the platform offer?
+            </div>
+            <div class="faq-answer">
+                The platform provides training on sustainable practices, alternative livelihoods, and other educational
+                skills that can help individuals find new ways to generate income without harming the environment.
+            </div>
+
+            <div class="faq-question" onclick="toggleAnswer(event)">
+                How can users engage with the platform?
+            </div>
+            <div class="faq-answer">
+                Users can engage with the platform through interactive tools, educational content, and forums where they
+                can share information and report poaching activities.
+            </div>
+
+            <div class="faq-question" onclick="toggleAnswer(event)">
+                What is the primary objective of this project?
+            </div>
+            <div class="faq-answer">
+                The primary objective is to provide people with opportunities to work without harming the environment,
+                thus reducing poaching and promoting employment and education within communities.
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleAnswer(event) {
+            // Close any open answer
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            allAnswers.forEach(answer => answer.style.display = 'none');
+            
+            // Open the clicked question's answer
+            const question = event.target;
+            const answer = question.nextElementSibling;
+            answer.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

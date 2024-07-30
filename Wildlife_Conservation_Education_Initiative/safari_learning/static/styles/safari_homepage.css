@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #0b2d01;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #2e7918;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+nav a:hover {
+  background-color: #0b2d01;
+  color: #fff;
+}
+nav a:active {
+  background-color: #0b2d01;
+  color: #fff;
+}
+
+.user-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+}
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.interest {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #2e7918;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #4caf50, #388e3c);
+  transition: transform 0.2s;
+  flex: 1;
+}
+.interest:hover {
+  transform: scale(1.1);
+}
+
+.courses {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.course-div {
+  background-color: #e8f5e9;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.course-div img {
+  max-width: 100%;
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.course-div .info {
+  flex-grow: 1;
+}
+
+.course-div p {
+  color: #0b2d01;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.course-div a {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.course-div a:hover {
+  background-color: #45a049;
+}
+
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+footer {
+  background-color: #2e7918;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safari User Landing Page</title>
+    <link rel="stylesheet" href="{% static 'styles/Landingpage.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Safari {{logged_in_user.first_name}} Portal</h1>
+    </header>
+    <nav>
+      <a href="{% url 'safari:homepage' %}">Courses</a>
+      <a href="{% url 'safari:interests' user.id %}">Interests</a>
+      <a href="{% url 'safari:book_event' %}">Book Event</a>
+      <a href="{% url 'safari:faq_page' %}">FAQ</a>
+    </nav>
+
+    <div class="container">
+      <div class="user-info">
+        <h2>Hello, {{ logged_in_user.first_name }} {{ logged_in_user.last_name }}</h2>
+        <p>Age: {{ logged_in_user.age }}</p>
+        <p>Profession: {{ logged_in_user.profession }}</p>
+        <div class="interests">
+          {% for interest in logged_in_user.interests.interests %}
+            <div class="interest">{{ interest }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Safari User Portal. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
