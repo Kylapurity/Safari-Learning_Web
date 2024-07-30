@@ -17,7 +17,7 @@
       <a href="{% url 'safari:book_event' %}">Book Event</a>
       <a href="{% url 'safari:faq_page' %}">FAQ</a>
     </nav>
-
+<main>
     <div class="container">
       <div class="user-info">
         <h2>Hello, {{ logged_in_user.first_name }} {{ logged_in_user.last_name }}</h2>
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-
+  </main>
     <footer>
       <p>&copy; 2024 Safari User Portal. All rights reserved.</p>
     </footer>
