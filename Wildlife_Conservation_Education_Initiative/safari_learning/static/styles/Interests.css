@@ -66,12 +66,12 @@ main {
     border: 1px solid black;
     border-radius: 5px;
     background-color: #f53b3b;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 .user-interest-span {
     background-color: #6cf56c;
-    color: white;
+    color:#0000 ;
 }
 
 .remove-icon {
